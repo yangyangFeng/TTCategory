@@ -287,17 +287,6 @@
 }
 
 
-+ (NSString*)UTF8_To_GB2312:(NSString*)utf8string
-{
-    NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-    NSData* gb2312data = [utf8string dataUsingEncoding:-2147482063];
-    NSString *gbkstring = [[NSString alloc] initWithData:gb2312data encoding:-2147482063];
-    //    NSString* gbkString = (NSString*)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)utf8string, NULL, NULL, kCFStringEncodingGB_18030_2000));
-    NSString *str = (NSString*)CFBridgingRelease( CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault, (CFStringRef)utf8string, NULL, kCFStringEncodingUTF8));
-    return  str;
-}
-
-
 + (BOOL)judgeOnlyIncludeCEN:(NSString *)str
 {
     NSString * regex = @"[a-zA-Z0-9\u3400-\u9fff]+";

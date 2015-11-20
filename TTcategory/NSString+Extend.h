@@ -12,68 +12,62 @@
 @interface NSString (Extend)
 
 /** 删除所有的空格 */
-@property (nonatomic,copy,readonly) NSString *deleteSpace;
-
-
-
-
-
+@property (nonatomic, copy, readonly) NSString* deleteSpace;
 
 /*
  *  时间戳对应的NSDate
  */
-@property (nonatomic,strong,readonly) NSDate *date;
+@property (nonatomic, strong, readonly) NSDate* date;
 
-
-+ (NSString *)dictionaryToJsonString:(NSDictionary *)dict;
-+(BOOL)isValide:(NSString *)value;
++ (NSString*)dictionaryToJsonString:(NSDictionary*)dict;
++ (BOOL)isValide:(NSString*)value;
 
 //UTF-8转码
-+ (NSString *)UTF8StringWithString:(NSString *)string;
++ (NSString*)UTF8StringWithString:(NSString*)string;
 
-+ (NSString *)imageWithBase64:(UIImage *)image;
++ (NSString*)imageWithBase64:(UIImage*)image;
 //生成SN
-+(NSString *)snWithString:(NSString *)userid;
+//+(NSString *)snWithString:(NSString *)userid;
 
 //验证身份证
-+ (BOOL)verifyIDCardNumber:(NSString *)value; //验证身份证
++ (BOOL)verifyIDCardNumber:(NSString*)value; //验证身份证
 
 //银行卡
-+ (BOOL) validateBankCardNumber: (NSString *)bankCardNumber;
++ (BOOL)validateBankCardNumber:(NSString*)bankCardNumber;
 
 //用户名
-+ (BOOL) validateUserName:(NSString *)name;
++ (BOOL)validateUserName:(NSString*)name;
 
 //密码
-+ (BOOL) validatePassword:(NSString *)passWord;
++ (BOOL)validatePassword:(NSString*)passWord;
 
 //昵称
-+ (BOOL) validateNickname:(NSString *)nickname;
++ (BOOL)validateNickname:(NSString*)nickname;
 
-+(NSString *)getCurrentDate;
++ (NSString*)getCurrentDate;
 
 //获取本机时间
-+ (NSString *)stringWithCurrenDate;
++ (NSString*)stringWithCurrenDate;
 
 //手机号码验证
-+ (BOOL) validateMobile:(NSString *)mobile;
++ (BOOL)validateMobile:(NSString*)mobile;
 
 //车牌号验证
-+ (BOOL) validateCarNo:(NSString *)carNo;
++ (BOOL)validateCarNo:(NSString*)carNo;
 
 //车牌号验证
-+ (BOOL) validateEnginno:(NSString *)enginno;
++ (BOOL)validateEnginno:(NSString*)enginno;
 
 /**
  *  验证中文汉字字母
  */
-+(BOOL)validateString:(NSString *)regStr;
++ (BOOL)validateString:(NSString*)regStr;
 /**
  *  以当前时间为图片名称
  *
  *  @return 图片名称.jpeg
  */
-+ (NSString *)imageNameWithCurrentDate;
++ (NSString*)imageNameWithCurrentDate;
 /**
  *  验证手机号码是否符合规则
  *
@@ -81,7 +75,7 @@
  *
  *  @return YES符合、NO不符合
  */
-+ (BOOL)isMobileNumber:(NSString *)mobileNum;
++ (BOOL)isMobileNumber:(NSString*)mobileNum;
 /**
  *  检查密码是否是6-20位 允许特殊字符
  *
@@ -91,23 +85,10 @@
  */
 + (BOOL)CheckInput:(NSString*)_text;
 
-
-
-+ (NSData *)decodeWithBase64String:(NSString *)str;
-
-/**
- *  UTF-8  转 GB2132
- *
- *  @param utf8string 编码串
- *
- *  @return string
- */
-+ (NSString*)UTF8_To_GB2312:(NSString*)utf8string;
-
 /**
  *  判断字符串中是否只有中文、英文和数字
  */
-+ (BOOL)judgeOnlyIncludeCEN:(NSString *)str;
++ (BOOL)judgeOnlyIncludeCEN:(NSString*)str;
 /**
  *  判断是否只有英文字母和数字
  *
@@ -115,7 +96,7 @@
  *
  *  @return yes or no
  */
-+ (BOOL)isEnglishWordOrNumber:(NSString *)str;
++ (BOOL)isEnglishWordOrNumber:(NSString*)str;
 /**
  *  只有数字
  *
@@ -123,17 +104,14 @@
  *
  *  @return yes or no
  */
-+ (BOOL)isOnlyNumber:(NSString *)str;
++ (BOOL)isOnlyNumber:(NSString*)str;
 /*!
  *  判断输入字符串时候有系统自带表情
  */
-+ (BOOL)stringContainsEmoji:(NSString *)string;
++ (BOOL)stringContainsEmoji:(NSString*)string;
 /**
  *  时间戳转格式化的时间字符串
  */
--(NSString *)timestampToTimeStringWithFormatString:(NSString *)formatString;
-
-
-
+- (NSString*)timestampToTimeStringWithFormatString:(NSString*)formatString;
 
 @end
