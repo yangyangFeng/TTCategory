@@ -26,7 +26,7 @@ s.platform = :ios, "7.0"
 # 代码的Clone 地址 和 tag 版本
 s.source = { :git => "https://github.com/yangyangFeng/TTCategory.git", :tag => "0.0.1" }
 # 如果使用pod 需要导入哪些资源
-s.source_files = "*.{h,m}"
+s.source_files = "TTCategory/**/*.{h,m}"
 
 # 框架是否使用的ARC/Users/apple/Desktop/TTCategory/TT_category/CALayer+Transition.m
 s.requires_arc = true
