@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 # 名称 使用的时候pod search [name]
 s.name = "TTCategory"
 # 代码库的版本
-s.version = "1.0.2"
+s.version = "1.0.3"
 # 简介
 s.summary = "一个iOS开发常用的Category集合"
 # 主页
