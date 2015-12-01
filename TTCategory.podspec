@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 # 名称 使用的时候pod search [name]
 s.name = "TTCategory"
 # 代码库的版本
-s.version = "1.0.0"
+s.version = "1.0.2"
 # 简介
-s.summary = "The TTCategory with TY"
+s.summary = "一个iOS开发常用的Category集合"
 # 主页
 s.homepage = "http://write.blog.csdn.net/postlist"
 # 许可证书类型，要和仓库的LICENSE 的类型一致
